@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Premium Barber Shop | El Arte del Grooming</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header / Navigation -->
+        <header>
+            <div class="container header-content">
+                <div class="logo">
+                    <span class="material-symbols-outlined text-primary" style="font-size: 2.5rem;">content_cut</span>
+                    <h1>LUXE<span class="text-primary">BARBER</span></h1>
+                </div>
+                <nav>
+                    <a href="#services">Servicios</a>
+                    <a href="#booking">Reservar</a>
+                    <a href="#gallery">Galería</a>
+                    <a href="#about">Nosotros</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-primary" onclick="window.location.href='#booking'">Reservar Cita</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <span class="hero-tagline">Desde 1992</span>
+                <h2>EL ARTE DE LA <br/> <span class="text-gold">PRECISIÓN</span></h2>
+                <p>Experimenta el pináculo del grooming tradicional en una atmósfera moderna. Cortes personalizados, afeitados reales y una sofisticación atemporal para el caballero moderno.</p>
+                <div class="hero-actions">
+                    <a class="btn-primary btn-lg" href="#booking" style="text-decoration: none; display: inline-block;">Reserva tu Experiencia</a>
+                    <a class="btn-secondary btn-lg" href="#services">Ver Menú</a>
+                </div>
+            </div>
+            <div class="scroll-indicator" style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); opacity: 0.5;">
+                <span class="material-symbols-outlined" style="font-size: 2rem; animation: bounce 2s infinite;">expand_more</span>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section container" id="services">
+            <div class="section-title">
+                <span>Nuestro Menú</span>
+                <h2>Tratamientos Exclusivos</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="material-symbols-outlined service-icon">content_cut</span>
+                        <span class="service-price">$55</span>
+                    </div>
+                    <h4>Corte Clásico</h4>
+                    <p>Un corte de pelo personalizado que incluye lavado, masaje capilar y peinado de precisión para adaptarse a tu estilo.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="material-symbols-outlined service-icon">face</span>
+                        <span class="service-price">$45</span>
+                    </div>
+                    <h4>Afeitado Real</h4>
+                    <p>El afeitado tradicional definitivo con navaja, toallas calientes, aceites esenciales y bálsamo post-afeitado.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="material-symbols-outlined service-icon">brush</span>
+                        <span class="service-price">$35</span>
+                    </div>
+                    <h4>Esculpido de Barba</h4>
+                    <p>Grooming experto de barba usando máquinas y tijeras para definir tu vello facial con nitidez extrema.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="material-symbols-outlined service-icon">spa</span>
+                        <span class="service-price">$40</span>
+                    </div>
+                    <h4>Executive Head Spa</h4>
+                    <p>Tratamiento de acondicionamiento profundo y masaje vigorizante para promover la salud capilar y relajación.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="material-symbols-outlined service-icon">palette</span>
+                        <span class="service-price">$70</span>
+                    </div>
+                    <h4>Camuflaje de Canas</h4>
+                    <p>Tratamiento de color sutil para camuflar las canas de forma natural para un aspecto rejuvenecido.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="material-symbols-outlined service-icon">stars</span>
+                        <span class="service-price">$95</span>
+                    </div>
+                    <h4>Combo Luxe</h4>
+                    <p>Nuestro servicio insignia que combina el Corte Clásico y el Afeitado Real para la experiencia completa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section class="section booking-section" id="booking">
+            <div class="container">
+                <div class="booking-grid">
+                    <div>
+                        <div class="section-title" style="text-align: left;">
+                            <span>Disponibilidad</span>
+                            <h2 style="text-align: left;">Reserva tu Silla</h2>
+                        </div>
+                        <p style="color: var(--text-muted); margin-bottom: 2rem;">Selecciona tu fecha y hora preferidas. Nuestros maestros barberos tienen alta demanda, recomendamos reservar con antelación.</p>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <div class="info-text">
+                                    <h5>Horario de Atención</h5>
+                                    <p>Lun - Sáb: 9am - 8pm | Dom: 11am - 5pm</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="material-symbols-outlined">location_on</span>
+                                <div class="info-text">
+                                    <h5>Ubicación</h5>
+                                    <p>123 Elegance Blvd, Fashion District, NY</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-card">
+                        <div class="form-group">
+                            <label class="form-label">Seleccionar Servicio</label>
+                            <select class="form-control">
+                                <option>Corte Clásico</option>
+                                <option>Afeitado Real</option>
+                                <option>Esculpido de Barba</option>
+                                <option>Combo Luxe</option>
+                            </select>
+                        </div>
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label class="form-label">Fecha</label>
+                                <input class="form-control" type="date" id="dateInput"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Hora</label>
+                                <select class="form-control">
+                                    <option>09:00 AM</option>
+                                    <option>10:30 AM</option>
+                                    <option>01:00 PM</option>
+                                    <option>03:30 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Calendario</label>
+                            <div class="calendar-days">
+                                <!-- Generado por JS -->
+                            </div>
+                        </div>
+                        <button class="btn-primary" style="width: 100%; padding: 1.25rem;">Confirmar Cita</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="section container" id="gallery">
+            <div class="gallery-header">
+                <div>
+                    <span>Galería Visual</span>
+                    <h2>Precisión Magistral</h2>
+                </div>
+                <button class="btn-outline">Sigue a @LuxeBarber</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img alt="Modern pompadour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBibKBg1dcibUzdpkjbhK4LGKPWw_ygp87PpseL-zYXfPGRvfkLV2dNIPANShpuz4wtCU9aX93CHNuJaFVDZOlQfOqJcNpz4KGVtHkOzN2skdVMHVp-J2q_Nmj-gLRn_NknCJXJUr6tvY6run9j-02XLzOGzHng1uWSmtGpL_90Rt47Ayh7HwQaw-v0ssKqvBCzphiepKyUESpPXWG7G3crY-vL4e5ujO55lDpxyg-5_oRQw3yendUQLd9s97UtuxOJ8kp9daQ60tk"/>
+                </div>
+                <div class="gallery-item">
+                    <img alt="Barber shop interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMZlJMch1sg6s29oJ7mJ1GFm6GcqII4o5qlb6NDawPNvGjeXf9YREmceUhl31vsJ92ljcS4BJgyLdCgYMbyv-LRWfUJVIdk5fsAesWCO_FatWIXx6HBfCgaeBwzPp8LzeYXUeKt26nvQx8pfSZpyvrJk3btA3nK-X5L97yJQxjY_1SuWHhly5X-VEfx3lwPp15gXWC1nMsJd3w28-7j0tAdw7bzEcdkSa_PTwa1aG6uMA5SPuFNNkpmShPFxrbkg830s2tVz-vnY4"/>
+                </div>
+                <div class="gallery-item">
+                    <img alt="Barber tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW9jq9hZQjHETZNFkAQrDNVPTmfuUUv25vpuL5HHF8Clz8B4wT0ioYquDpEU4xJNeicGbPWaE5UhWMGvKT1XVghQwx0O33ivrn1r1LTem2abM-7-bYYWq-V69Z-JdPic6f7su8qE1kAI-RbY8X6giqVQv3lI59CrtV9LhtU1CrgbY9vmhkISWsKQJT2bFqaiN8u0CWQlJuFSdQVV14TFDn6rJ82OVSzxyneADH5cssYVFjUJIbQ5JAlV0PGGafiymejvRkRlRjcNE"/>
+                </div>
+                <div class="gallery-item">
+                    <img alt="Working barber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYlAsrGhlzomPvaYVJqu7vq8rX6e2DSQgW-bvzCM5qq7ExVp-HzS6GQW10I3tbYyPOli9BmJIQK1SV4olCPhRp37aQd_gHvIL7AlmCCO0JU9-63EcXfQEZ8FRqQ79KryehxdeaSXCKkXdqZqRyHPj6DHsfCXY6IlRo4YCeWZu89iRJWO_OoXSxZ9nCyjxqc_GPYJBMbKvxRvltCfG2mvIUu_W6sZlo93npDXLjAxGyFQ5sZXuNM2n1_IXtRCDcc_510xQ0ehQ7vlg"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <span class="material-symbols-outlined text-primary" style="font-size: 2rem;">content_cut</span>
+                        <h1>LUXE<span class="text-primary">BARBER</span></h1>
+                    </div>
+                    <p>Redefiniendo el estándar del grooming de lujo desde 1992. Cada corte es una obra de maestra, cada cliente es familia.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link"><span class="material-symbols-outlined">share</span></a>
+                        <a href="#" class="social-link"><span class="material-symbols-outlined">alternate_email</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Navegación</h4>
+                    <ul class="footer-list">
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#booking">Reservar</a></li>
+                        <li><a href="#gallery">Galería</a></li>
+                        <li><a href="#about">Nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">Únete para consejos de estilo y ofertas exclusivas.</p>
+                    <div class="newsletter-input">
+                        <input type="email" class="form-control" placeholder="Tu Email">
+                        <button class="btn-primary" style="padding: 0.5rem 1rem;">
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-bottom">
+                <p>© 2024 Luxe Barber Shop. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Servicio</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <style>
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+            40% {transform: translateY(-10px) translateX(-50%);}
+            60% {transform: translateY(-5px) translateX(-50%);}
+        }
+    </style>
+</body>
+</html>
