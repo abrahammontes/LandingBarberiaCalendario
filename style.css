@@ -178,7 +178,7 @@ nav a:hover { color: var(--primary); }
 /* Hero */
 .hero {
     position: relative;
-    height: 870px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,13 +186,22 @@ nav a:hover { color: var(--primary); }
     overflow: hidden;
 }
 
-.hero-bg {
+.hero-video-container {
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHMyseyhJQWAdl-p1urmB9ZAoDVR1pBQ7xkYKelD6GY-K2gmCvI-DXDVvknhC5D8Io8Y0fPSx9qrTimNsRvowLt1aTgtaCW8e5N432CglwR-UwoBT6QIv63q6LoDXlKOyGuhbz0BLsmB5sP6b2J_cyQt1PU4XtYkKm6LsS-aJ9WcaNwhQouZHJTMgQq5_x7eT4sk_R6BULyYD_esUvGHm1Q6MCq1ZhEms9P3jQR_gtvHv92DpXs3CbPl4n3XrKXLMM0kD5P9GoT4U");
-    background-size: cover;
-    background-position: center;
     z-index: -1;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8));
 }
 
 .hero-content {
