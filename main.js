@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initLanguage();
     initBooking();
     initModal();
+    initNewsletter();
 });
 
 function initModal() {
@@ -518,6 +519,59 @@ function initBooking() {
         } finally {
             confirmBtn.disabled = false;
             confirmBtn.textContent = originalText;
+        }
+    });
+}
+
+function initNewsletter() {
+    const newsletterBtn = document.getElementById('newsletterBtn');
+    const newsletterEmail = document.getElementById('newsletterEmail');
+    if (!newsletterBtn || !newsletterEmail) return;
+
+    newsletterBtn.addEventListener('click', async () => {
+        const email = newsletterEmail.value.trim();
+        if (!email || !email.includes('@')) {
+            const title = currentLang === 'es' ? 'Email Inválido' : 'Invalid Email';
+            const msg = currentLang === 'es' 
+                ? 'Por favor ingresa un correo electrónico válido.' 
+                : 'Please enter a valid email address.';
+            showModal('error', title, msg);
+            return;
+        }
+
+        newsletterBtn.disabled = true;
+        const originalContent = newsletterBtn.innerHTML;
+        newsletterBtn.innerHTML = '<span class="material-symbols-outlined">sync</span>';
+
+        try {
+            const params = new URLSearchParams({
+                type: 'newsletter',
+                email: email
+            });
+
+            const response = await fetch(`${GOOGLE_SCRIPT_URL}?${params.toString()}`);
+            const result = await response.json();
+
+            if (result.status === 'success') {
+                const title = currentLang === 'es' ? '¡Suscripción Exitosa!' : 'Subscription Successful!';
+                const msg = currentLang === 'es' 
+                    ? 'Gracias por unirte. Pronto recibirás nuestras novedades.' 
+                    : 'Thank you for joining. You will receive our news soon.';
+                showModal('success', title, msg);
+                newsletterEmail.value = '';
+            } else {
+                throw new Error(result.message);
+            }
+        } catch (error) {
+            console.error('[Newsletter] Error:', error);
+            const title = currentLang === 'es' ? 'Error de Suscripción' : 'Subscription Error';
+            const msg = currentLang === 'es' 
+                ? 'Hubo un error al procesar tu suscripción. Inténtalo de nuevo.' 
+                : 'There was an error processing your subscription. Please try again.';
+            showModal('error', title, msg);
+        } finally {
+            newsletterBtn.disabled = false;
+            newsletterBtn.innerHTML = originalContent;
         }
     });
 }
