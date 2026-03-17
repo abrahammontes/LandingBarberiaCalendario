@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/LandingBarberiaCalendario/',
+  base: process.env.GITHUB_ACTIONS === 'true' 
+    ? '/LandingBarberiaCalendario/' 
+    : '/',
 })
