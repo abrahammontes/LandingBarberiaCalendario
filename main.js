@@ -420,11 +420,11 @@ function initBooking() {
             return; // Silently fail to avoid giving bots feedback
         }
 
-        if (!nameInput.value || !emailInput.value || !dateInput.value || (timeSelect.selectedIndex <= 0 && timeSelect.options[0].disabled)) {
+        if (!nameInput.value || !emailInput.value || !whatsappInput.value || !dateInput.value || (timeSelect.selectedIndex <= 0 && timeSelect.options[0].disabled)) {
             const title = currentLang === 'es' ? 'Datos Incompletos' : 'Incomplete Data';
             const msg = currentLang === 'es' 
-                ? 'Por favor completa todos los campos (nombre, email, fecha y hora)' 
-                : 'Please fill in all fields (name, email, date and time)';
+                ? 'Por favor completa todos los campos (nombre, email, WhatsApp, fecha y hora)' 
+                : 'Please fill in all fields (name, email, WhatsApp, date and time)';
             showModal('error', title, msg);
             return;
         }
