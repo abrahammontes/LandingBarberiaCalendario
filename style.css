@@ -870,10 +870,13 @@ footer {
     justify-content: center;
 }
 
-.stat-item h3 {
-    font-size: 3rem;
+.stat-item h3, 
+.stat-item .stat-icon {
+    font-size: 3.5rem;
     color: var(--primary);
     margin-bottom: 0.5rem;
+    display: block;
+    line-height: 1;
 }
 
 .stat-item p {
