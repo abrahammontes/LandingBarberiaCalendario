@@ -453,7 +453,15 @@ function initBooking() {
                 type: 'booking',
                 name: nameInput.value,
                 email: emailInput.value,
-                whatsapp: whatsappInput.value ? countryCodeSelect.value + ' ' + whatsappInput.value : '',
+                whatsapp: (() => {
+                    const countryCode = countryCodeSelect.value;
+                    const phone = whatsappInput.value.replace(/\D/g, '');
+                    // For Mexico (+52), WhatsApp usually requires a '1' after the country code for mobile numbers
+                    if (countryCode === '+52' && phone.length === 10) {
+                        return `${countryCode} 1 ${phone}`;
+                    }
+                    return `${countryCode} ${phone}`;
+                })(),
                 service: serviceName,
                 date: startDate.toISOString(),
                 duration: 20
