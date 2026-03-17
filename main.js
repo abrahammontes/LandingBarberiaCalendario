@@ -456,11 +456,15 @@ function initBooking() {
                 whatsapp: (() => {
                     const countryCode = countryCodeSelect.value;
                     const phone = whatsappInput.value.replace(/\D/g, '');
-                    // For Mexico (+52), WhatsApp usually requires a '1' after the country code for mobile numbers
+                    // Mexico (+52): Requires '1' after country code for WhatsApp mobile numbers
                     if (countryCode === '+52' && phone.length === 10) {
-                        return `${countryCode} 1 ${phone}`;
+                        return `${countryCode}1${phone}`;
                     }
-                    return `${countryCode} ${phone}`;
+                    // Argentina (+54): Requires '9' after country code
+                    if (countryCode === '+54') {
+                        return `${countryCode}9${phone}`;
+                    }
+                    return `${countryCode}${phone}`;
                 })(),
                 service: serviceName,
                 date: startDate.toISOString(),
